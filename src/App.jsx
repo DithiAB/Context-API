@@ -1,3 +1,4 @@
+import Count from "./Components/Count"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <div>
-    
+    <Count/>
     </div>
   )
 }

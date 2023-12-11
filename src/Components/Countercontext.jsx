@@ -1,7 +1,6 @@
-import {useState, createContext} from 'react'
-import Count from './Count';
+import {useState, createContext, Children} from 'react'
 export const counterNew= createContext();
-export const Counter = () => {
+export const Counter = ({children}) => {
     const[count, setCount]= useState(0)
     const Increment=()=>{
         if(count<9){
@@ -17,7 +16,7 @@ export const Counter = () => {
   return (
     <div>
         <counterNew.Provider value={value}>
-            <Count/>
+            {children}
         </counterNew.Provider>
     </div>
   )
